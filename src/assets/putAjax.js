@@ -9,7 +9,7 @@ export const putAjax = async (url,object,callback)=>{
         let res = await fetch(url,objectHeaders);
         let putRes = await res.json();
         console.log(putRes);
-        callback(putRes);
+        callback(putRes.reverse());
     }catch(e){console.error(e)}
 
 }

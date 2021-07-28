@@ -6,6 +6,6 @@ export async function deleteAjax(url,id ,tabla ,callback){
     try{
         let res = await fetch(`${url}/${id}/${tabla}`,headers);
         let resdata = await res.json();
-        callback(resdata);
+        callback(resdata.reverse());
     }catch(e){console.error(e)}
 }

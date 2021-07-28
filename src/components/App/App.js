@@ -73,12 +73,18 @@ import {styles} from './styles.js';
     </Crud>
 
     <div className="FormContainer">
-        {!mount ? <div 
+        {!mount ? 
+                <div className={`footer-${name}`}>
+                    <div 
                       className={`button-${name}`} 
                       onClick={()=>changeState()}>
-                      <IconoNuevo style={{width:"10px",height:"10px",marginRight:"10px",fill:color2}}></IconoNuevo>
-                      Nuevo
-                  </div> : <></> }
+                      <IconoNuevo className={`icono-button-${name}`}></IconoNuevo>
+                      <span className={`texto-button-${name}`}>
+                        Nuevo
+                      </span>
+                    </div>
+                </div>
+                : <></> }
                   
         <Form 
             on={mount} 

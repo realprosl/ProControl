@@ -1,5 +1,5 @@
 import {CSS} from '../../assets/CSS.js';
-import { color2, color3,color4, colorFondo } from '../../constantes.js';
+import { color1,color2, color3,color4, colorFondo } from '../../constantes.js';
 
 export const styles = CSS({
     component:'app',
@@ -48,7 +48,13 @@ export const styles = CSS({
         boxShadow: 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;',
         hover:{
             backgroundColor:color4,
-        }
+        },
+    },
+    class_iconoButton:{
+        width:"10px",
+        height:"10px",
+        marginRight:"10px",
+        fill:color2
     },
     media_maxWidth_600px:{
         class_container:{
@@ -56,6 +62,41 @@ export const styles = CSS({
             width:'100%',
             height:'100%',
             margin:'0px',
+            padding :'0px',
+            position: 'relative',
+            borderRadius: '0px',
+        },
+        class_tittle:{
+            display:'none',
+        },
+        class_footer:{
+            display:'flex',
+            position:'fixed',
+            top:'93%',
+            left:'-1px',
+            width: '100%',
+            height: '50px',
+            backgroundImage:colorFondo,
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            padding:'0px',
+            borderTop:'1px solid'+color1,
+            boxShadow: '0px 0px 10px 1px rgb(0 0 0 / 40%)',
+        },
+        class_button:{
+            backgroundColor:'transparent',
+            boxShadow: 'none',
+            margin:'0px',
+            hover:{
+                backgroundColor:'transparent',
+            }
+        },
+        class_textoButton:{
+            display:'none',
+        },
+        class_iconoButton:{
+            width:'30px',
+            height:'30px',
         }
 
     }

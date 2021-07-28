@@ -5,10 +5,7 @@ export const styles = CSS({
 
     component : 'menu',
     class_iconos:{
-        fill:color1,
-        hover:{
-            fill:color2,
-        }
+        fill:color2,
     },
     class_container:{
         display: 'flex',
@@ -117,29 +114,40 @@ export const styles = CSS({
             justifyContent: 'center',
             justifyItems: 'center',
             padding:'0px',
-            marginBottom:'10px',
+            marginBottom:'2px',
         },
         class_containerBuscador:{
             display: 'flex',
             justifyContent: 'center',
-            width : '100%',
+            width : '98%',
             height:'35px',
+            margin:'0px 10px 5px 10px',
         },
         class_containerBtn :{
             marginRight:'0px',
-            marginBottom: '20px',
+            marginBottom: '2px',
             width : '100%',
             justifyContent: 'spaceBetween',
 
             
         },
         class_btn:{
-            width:'100px',
-            height:'100px',
+            width:'50px',
+            height:'50px',
             boxSizing: 'border-box',
-            padding: '20px',
             margin: '0px',
-            marginTop: '30px',
+            marginTop: '10px',
+            boxShadow: 'none',
+            backgroundColor: 'transparent',
+            nthChild_1:{
+                marginLeft: '10px',
+            },
+            nthChild_3:{
+                marginRight: '10px',
+            },
+            hover:{
+                transform:'none',
+            }
         },
         class_select:{
             width:'80px',
@@ -148,8 +156,8 @@ export const styles = CSS({
         class_buscador:{
             height:'35px'
         },
-        class_iconos:{
-            fill:'white',
+        class_label:{
+            display:'none',
         }
 
     }

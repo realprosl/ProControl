@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
 import {createPdf} from '../../assets/createPdf';
 import {PORT_BD} from '../../constantes';
-import {ReactComponent as IconObras} from '../../svg/sketch.svg';
+import {ReactComponent as IconObras} from '../../svg/team.svg';
 import {ReactComponent as IconoMateriales} from '../../svg/transporte-de-camiones-con-materiales-de-construccion.svg';
-import {ReactComponent as IconoPdf} from '../../svg/archivo-pdf.svg';
+import {ReactComponent as IconoPdf} from '../../svg/file.svg';
 import {ReactComponent as SubirFile} from '../../svg/upload.svg';
 import {styles} from './styles.js';
 import {handleBuscador} from '../../handles/handleBucador.js';
@@ -54,7 +54,7 @@ const {
                 </div>
                     <label 
                         for="upFile"
-                        className={`btn-${name}`}>
+                        className={`btn-${name} label-${name}`}>
                     <SubirFile className={`iconos-${name}`}></SubirFile>
                     </label>
                     <input 

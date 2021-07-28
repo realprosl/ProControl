@@ -56,8 +56,12 @@ export const styles = CSS({
 
     },
     media_maxWidth_600px:{
+        class_container:{
+            padding:'30px',
+        },
         class_item:{
             height:'35px',
+            margin:'10px  0px 10px 0px',
         },
         class_botonera:{
             justifyContent:'center'

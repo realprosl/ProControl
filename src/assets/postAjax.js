@@ -9,7 +9,7 @@ export async function postAjax(url,data ,callback) {
     try{
         let res = await fetch(url,objectAjax);
         let resData = await res.json();
-        callback(resData);
+        callback(resData.reverse());
     }
     catch(e){console.error(e)}
 

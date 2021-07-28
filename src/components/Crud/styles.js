@@ -85,16 +85,24 @@ export const styles = CSS({
   
     // media
     media_maxWidth_600px:{
-
+        class_container:{
+            maxHeight:'900px',
+            height:'100%',
+            overflow: 'hidden',
+            overflowY: 'auto',
+        },
+        class_table: {
+            border:'none',
+            margin:'0px',
+        },
         class_botonera:{
-            justifyContent: 'spaceBetween'
         },
         class_tr:{
             display : 'flex',
             flexDirection : 'column',
             width : '100%',
             margin:'0px 0px 1px 0px',
-            backgroundColor:'white',
+            backgroundColor:'black',
         },
         class_td:{
             display: 'flex',
@@ -102,6 +110,8 @@ export const styles = CSS({
             flexWrap : 'nowrap',
             justifyContent: 'space-around',
             width : '100%',
+            paddingLeft:'30px',
+            borderBottom : '1px solid'+color4,
         },
         class_trTitulo:{
             display : 'none',
@@ -114,21 +124,24 @@ export const styles = CSS({
         },
         class_btnEditar:{
             display:'flex',
-            width : '45%',
+            width : '25%',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '10px 0px 10px 0px',
             paddingLeft:'0px',
             paddingRight:'0px',
+            borderRadius: '5px',
         },
         class_btnBorrar:{
             display:'flex',
-            width : '45%',
+            width : '25%',
             alignItems: 'center',
             justifyContent: 'center', 
             margin: '10px 0px 10px 0px',
             paddingLeft:'0px',
             paddingRight:'0px',
+            borderRadius: '5px',
+
         },
         class_louder:{
             marginLeft:'40%'
@@ -136,6 +149,7 @@ export const styles = CSS({
         class_labelInput:{
             display:'flex',
             minWidth:'100px',
+            color:color4,
         },
         class_tr:{
             backgroundColor: color1,

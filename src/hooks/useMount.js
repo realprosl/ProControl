@@ -5,9 +5,13 @@ export const useMount = (initial)=>{
     const changeState = ()=>{
         setMount(!mount)
         if(mount){
-            document.querySelector('.container-crud').style.maxHeight = '280px';
+            if(window.screen.width < '600'){
+                document.querySelector('.container-crud').style.maxHeight = 'initial';
+            }else{
+                document.querySelector('.container-crud').style.maxHeight = '280px';
+            }
         }else{
-            document.querySelector('.container-crud').style.maxHeight = '160px';
+            document.querySelector('.container-crud').style.maxHeight = '0px';
 
         }
     }
