@@ -5,6 +5,7 @@ import {ReactComponent as IconObras} from '../../svg/team.svg';
 import {ReactComponent as IconoMateriales} from '../../svg/transporte-de-camiones-con-materiales-de-construccion.svg';
 import {ReactComponent as IconoPdf} from '../../svg/file.svg';
 import {ReactComponent as SubirFile} from '../../svg/upload.svg';
+import {ReactComponent as GastosPersonales} from '../../svg/budget.svg';
 import {styles} from './styles.js';
 import {handleBuscador} from '../../handles/handleBucador.js';
 import {handleReset} from '../../handles/handleReset.js';
@@ -49,9 +50,17 @@ const {
                 </div>
                 <div 
                     className={`btn-${name}`}
+                    onClick={()=>setBaseDatos('gastosPersonales')}>
+                    <GastosPersonales className={`iconos-${name}`}></GastosPersonales>
+                </div>
+
+                <div 
+                    className={`btn-${name}`}
                     onClick={()=>createPdf(`${PORT_BD}/pdf/${busqueda} `,obras,busqueda)}>
                     <IconoPdf className={`iconos-${name}`}></IconoPdf>
                 </div>
+
+
                     <label 
                         for="upFile"
                         className={`btn-${name} label-${name}`}>
@@ -61,8 +70,9 @@ const {
                         type="file" 
                         id="upFile"
                         onChange={(e)=>handleFile(e,props)} 
-                        style={{opacity:0,zIndex:-1}}></input>
-            </div>
+                        style={{opacity:0,zIndex:-1}}>
+                    </input>
+                </div>
         
         <div 
             className={`container-buscador-${name}`}

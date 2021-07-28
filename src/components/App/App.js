@@ -4,6 +4,7 @@ import {Form} from '../Form/form';
 import {Menu} from '../Menu/Menu';
 import {useMount} from '../../hooks/useMount';
 import { getAjax } from '../../assets/getAjax';
+import {marcarIcono} from '../../assets/marcarIcono.js';
 import {useState , useEffect} from 'react';
 import {ReactComponent as IconoNuevo} from '../../svg/nuevo.svg';
 import { color1,color2,color3 } from '../../constantes';
@@ -31,6 +32,7 @@ import {styles} from './styles.js';
       setObras([]);
       getAjax(`${PORT_BD}/get/${baseDatos}`,setObras);
       getAjax(`${PORT_BD}/get/${baseDatos}`,setStaticObras);
+      marcarIcono(baseDatos);
   
   },[baseDatos])
 
