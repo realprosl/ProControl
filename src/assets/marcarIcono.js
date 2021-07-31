@@ -2,29 +2,17 @@
 
 export const marcarIcono = (baseDatos)=>{
 
-    const options = {
+    let listaBtn = document.body.querySelector('.container-btn-menu').childNodes;
 
-        obras:()=>{
-            document.body.querySelector('.container-btn-menu').childNodes[0].style.borderBottom='1px solid white';
-            document.body.querySelector('.container-btn-menu').childNodes[1].style.borderBottom='none';
-            document.body.querySelector('.container-btn-menu').childNodes[2].style.borderBottom='none';
+    if(window.screen.width < 600){    listaBtn.forEach(item=>{
+                                        if(item.getAttribute('name') != undefined){
+                                            if(item.getAttribute('name') === baseDatos){
+                                                item.style.borderBottom = '1px solid white';
 
-        },
-        materiales:()=>{
-            document.body.querySelector('.container-btn-menu').childNodes[1].style.borderBottom='1px solid white';
-            document.body.querySelector('.container-btn-menu').childNodes[0].style.borderBottom='none';
-            document.body.querySelector('.container-btn-menu').childNodes[2].style.borderBottom='none';
-        },
-        gastosPersonales:()=>{
-            document.body.querySelector('.container-btn-menu').childNodes[2].style.borderBottom='1px solid white';
-            document.body.querySelector('.container-btn-menu').childNodes[0].style.borderBottom='none';
-            document.body.querySelector('.container-btn-menu').childNodes[1].style.borderBottom='none';
-
-        },
-    }
-
-    if(window.screen.width < 600){
-        options[baseDatos]()
-    }
+                                            }else{
+                                                item.style.borderBottom = 'none'
+                                            }
+                                        }
+    })}
 
 }

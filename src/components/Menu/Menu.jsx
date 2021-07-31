@@ -6,6 +6,9 @@ import {ReactComponent as IconoMateriales} from '../../svg/transporte-de-camione
 import {ReactComponent as IconoPdf} from '../../svg/file.svg';
 import {ReactComponent as SubirFile} from '../../svg/upload.svg';
 import {ReactComponent as GastosPersonales} from '../../svg/budget.svg';
+import {ReactComponent as Todos} from '../../svg/todos.svg';
+import {ReactComponent as Ingresos} from '../../svg/ingresos.svg';
+import {ReactComponent as Sueldos} from '../../svg/sueldos.svg';
 import {styles} from './styles.js';
 import {handleBuscador} from '../../handles/handleBucador.js';
 import {handleReset} from '../../handles/handleReset.js';
@@ -37,21 +40,43 @@ const {
         <div className={`container-${name}`}>
             <div className={`container-btn-${name}`}>
                 <div
+                    name ="obras"
                     onClick={()=>setBaseDatos('obras')}
                     className={`btn-${name}`}
                     >
                     <IconObras className={`iconos-${name}`}></IconObras>
                 </div>
                 <div
+                    name ="materiales"
                     onClick={()=>setBaseDatos('materiales')}
                     className={`btn-${name}`}
                     >
                     <IconoMateriales className={`iconos-${name}`}></IconoMateriales>
                 </div>
                 <div 
+                    name="gastosPersonales"
                     className={`btn-${name}`}
                     onClick={()=>setBaseDatos('gastosPersonales')}>
                     <GastosPersonales className={`iconos-${name}`}></GastosPersonales>
+                </div>
+                <div 
+                    name ="necesidades"
+                    className={`btn-${name}`}
+                    onClick={()=>setBaseDatos('necesidades')}>
+                    <Todos className={`iconos-${name}`}></Todos>
+                </div>
+                <div 
+                    name ="sueldos"
+                    className={`btn-${name}`}
+                    onClick={()=>setBaseDatos('sueldos')}>
+                    <Sueldos className={`iconos-${name}`}></Sueldos>
+                </div>
+
+                <div 
+                    name = "ingresos"
+                    className={`btn-${name}`}
+                    onClick={()=>setBaseDatos('ingresos')}>
+                    <Ingresos className={`iconos-${name}`}></Ingresos>
                 </div>
 
                 <div 

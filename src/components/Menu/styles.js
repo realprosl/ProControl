@@ -132,13 +132,14 @@ export const styles = CSS({
             
         },
         class_btn:{
-            width:'50px',
-            height:'50px',
+            width:'35px',
+            height:'35px',
             boxSizing: 'border-box',
             margin: '0px',
             marginTop: '10px',
             boxShadow: 'none',
             backgroundColor: 'transparent',
+            overflow: 'hidden',
             nthChild_1:{
                 marginLeft: '10px',
             },
@@ -158,6 +159,10 @@ export const styles = CSS({
         },
         class_label:{
             display:'none',
+        },
+        class_iconos:{
+            width:'30px',
+            height:'30px',
         }
 
     }

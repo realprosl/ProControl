@@ -59,19 +59,19 @@ useEffect(()=>{
                     {generateItemCrud(obra ,name)}
                     <td className={`botonera-${name}`}> 
                             <div 
-                                className={`btn-editar-${name}`}
+                                className={`btn-${name}`}
                                 name={obra._id}
                                 onClick={(e)=>{handleEditar(e,baseDatos,setObras)}}>
-                                <IconoEditar style={{width:"10px",height:"10px",marginRight:"10px",fill:color2}}></IconoEditar>
-                                Editar
+                                <IconoEditar style={{width:"10px",height:"10px",fill:color2}}></IconoEditar>
+                                <label className={`btn-label-${name}`}>Editar</label>
                             </div>
 
                             <div 
-                                className={`btn-borrar-${name}`}  
+                                className={`btn-${name}`}  
                                 name={obra._id} 
                                 onClick={(e)=>deleteAjax(`${PORT_BD}/delete`,obra._id,baseDatos,setObras)}>
-                                <IconoBorrar style={{width:"10px",height:"10px",marginRight:"10px" ,fill:color2}}></IconoBorrar>
-                                Borrar
+                                <IconoBorrar style={{width:"10px",height:"10px",fill:color2}}></IconoBorrar>
+                                <label className={`btn-label-${name}`}>Borrar</label>
                             </div>
                         </td>
                        

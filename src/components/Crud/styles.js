@@ -37,7 +37,7 @@ export const styles = CSS({
         backgroundColor:colorFondo,
         border: '1px solid '+ colorFondo, 
     },
-    class_btnEditar:{
+    class_btn:{
         cursor: 'pointer',
         color: color2,
         paddingLeft:'10px',
@@ -48,16 +48,8 @@ export const styles = CSS({
             backgroundColor:color4,
         }
     },
-    class_btnBorrar:{
-        cursor: 'pointer',
-        color: color2,
-        paddingLeft:'10px',
-        paddingRight:'10px',
-        backgroundColor:color3,
-        boxShadow: 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;',
-        hover:{
-            backgroundColor:color4,
-        }
+    class_btnLabel:{
+        marginLeft:'10px',
     },
     class_tr:{
         backgroundColor: color1,
@@ -122,24 +114,13 @@ export const styles = CSS({
             boxSizing: 'border-box',
         
         },
-        class_btnEditar:{
+        class_btn:{
             display:'flex',
-            width : '25%',
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '10px 0px 10px 0px',
-            paddingLeft:'0px',
-            paddingRight:'0px',
-            borderRadius: '5px',
-        },
-        class_btnBorrar:{
-            display:'flex',
-            width : '25%',
+            width : '10%',
             alignItems: 'center',
             justifyContent: 'center', 
             margin: '10px 0px 10px 0px',
-            paddingLeft:'0px',
-            paddingRight:'0px',
+            padding: '5px 0px 5px 0px',
             borderRadius: '5px',
 
         },
@@ -153,6 +134,9 @@ export const styles = CSS({
         },
         class_tr:{
             backgroundColor: color1,
+        },
+        class_btnLabel:{
+            display:'none',
         }
     }
 })

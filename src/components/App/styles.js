@@ -50,6 +50,10 @@ export const styles = CSS({
             backgroundColor:color4,
         },
     },
+    class_footer:{
+        display:'flex',
+        flexDirection: 'row',
+    },
     class_iconoButton:{
         width:"10px",
         height:"10px",
@@ -78,7 +82,7 @@ export const styles = CSS({
             height: '50px',
             backgroundImage:colorFondo,
             alignItems: 'center',
-            justifyContent: 'flex-start',
+            justifyContent: 'space-between',
             padding:'0px',
             borderTop:'1px solid'+color1,
             boxShadow: '0px 0px 10px 1px rgb(0 0 0 / 40%)',
@@ -95,8 +99,8 @@ export const styles = CSS({
             display:'none',
         },
         class_iconoButton:{
-            width:'30px',
-            height:'30px',
+            width:'25px',
+            height:'25px',
         }
 
     }

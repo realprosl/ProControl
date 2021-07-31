@@ -7,6 +7,7 @@ import { getAjax } from '../../assets/getAjax';
 import {marcarIcono} from '../../assets/marcarIcono.js';
 import {useState , useEffect} from 'react';
 import {ReactComponent as IconoNuevo} from '../../svg/nuevo.svg';
+import {ReactComponent as Graficas} from '../../svg/graficos.svg';
 import { color1,color2,color3 } from '../../constantes';
 import {styles} from './styles.js';
 
@@ -83,6 +84,14 @@ import {styles} from './styles.js';
                       <IconoNuevo className={`icono-button-${name}`}></IconoNuevo>
                       <span className={`texto-button-${name}`}>
                         Nuevo
+                      </span>
+                    </div>
+                    <div 
+                      className={`button-${name}`} 
+                      onClick={()=>{}}>
+                      <Graficas className={`icono-button-${name}`}></Graficas>
+                      <span className={`texto-button-${name}`}>
+                        Graficas
                       </span>
                     </div>
                 </div>
