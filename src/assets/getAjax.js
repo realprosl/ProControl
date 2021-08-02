@@ -3,7 +3,7 @@ export async function getAjax(url,callback){
         let res = await fetch(url);
         let data = await res.json();
         if(data) console.log('Datos obtenidos corectamente,cantidad de posiciones =>',data.length);
-        callback(data.reverse());
+        (Array.isArray(data))?callback(data.reverse()):callback(data);
 
 
     }catch(e){console.error(e);}

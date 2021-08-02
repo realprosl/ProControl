@@ -2,12 +2,14 @@ import {PORT_BD} from '../../constantes';
 import {Crud} from '../Crud/Crud';
 import {Form} from '../Form/form';
 import {Menu} from '../Menu/Menu';
+import {Graficas} from '../Graficas/graficas.js';
 import {useMount} from '../../hooks/useMount';
+import {passProps} from '../Graficas/styles.js';
 import { getAjax } from '../../assets/getAjax';
 import {marcarIcono} from '../../assets/marcarIcono.js';
 import {useState , useEffect} from 'react';
 import {ReactComponent as IconoNuevo} from '../../svg/nuevo.svg';
-import {ReactComponent as Graficas} from '../../svg/graficos.svg';
+import {ReactComponent as Graficos} from '../../svg/graficos.svg';
 import { color1,color2,color3 } from '../../constantes';
 import {styles} from './styles.js';
 
@@ -25,6 +27,7 @@ import {styles} from './styles.js';
   const [totalSumatorio , setTotalSumatorio] = useState(0);
   const [busqueda , setBusqueda] = useState();
   const [propiedad,setPropiedad] = useState('id');
+  const [graficasOn , setGraficasOn] = useState(false);
 
 
   // useEfects
@@ -89,8 +92,12 @@ import {styles} from './styles.js';
                     <div 
                       className={`button-${name}`} 
                       onClick={()=>{}}>
-                      <Graficas className={`icono-button-${name}`}></Graficas>
-                      <span className={`texto-button-${name}`}>
+                      <Graficos 
+                          onClick={()=>{setGraficasOn(!graficasOn)}}
+                        className={`icono-button-${name}`}></Graficos>
+                      <span 
+                        onClick={()=>{setGraficasOn(!graficasOn)}}
+                        className={`texto-button-${name}`}>
                         Graficas
                       </span>
                     </div>
@@ -107,6 +114,12 @@ import {styles} from './styles.js';
         </Form>
       
     </div>
+    {(graficasOn)?
+      <Graficas
+        graficasOn={graficasOn}
+        setGraficasOn={setGraficasOn}>
+      </Graficas>
+      :<></>}
     <style>{styles}</style>
     </div>
   );

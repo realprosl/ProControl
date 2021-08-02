@@ -123,7 +123,6 @@ export const CSS = (datos)=>{
                     befores += convertInternCss('before',item,component,before);
                     }
                 // nth
-                console.log(nthChilds);
 
             }
 

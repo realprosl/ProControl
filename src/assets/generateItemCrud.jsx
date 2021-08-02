@@ -7,7 +7,6 @@ const isParOInpar = (contador)=>{
 export const generateItemCrud = (obra , name)=>{
     let resultado = [];
     let contador = 0;
-    console.log('Objeto a pintar =====>',obra)
     for(let item in obra){
 
         if(typeof item === 'number' && item != '_id'){

@@ -4,8 +4,9 @@ import { color1,color2, color3,color4, colorFondo } from '../../constantes.js';
 export const styles = CSS({
     component:'app',
     class_container:{
+        position:'relative',
         width:'90%',
-        overflow:'auto',
+        overflow:'hidden',
         marginTop:'30px',
         height:'90%',
         padding:'20px',

@@ -112,7 +112,7 @@ const {
             name="propiedades" 
             className={`select-${name}`}
             onChange={(e)=>handleSelect(e,props)}>
-            {generateSelect(props)}
+            {generateSelect(staticObras)}
         </select>
         <button 
             className={`reset-btn-${name}`}
