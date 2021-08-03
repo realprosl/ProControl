@@ -1,3 +1,4 @@
+import {colorBeneficiosPositivos , colorBeneficiosNegativos} from '../constantes.js';
 
 export const changeChart = (e,datosGrafica,setSelect)=>{
 
@@ -28,6 +29,6 @@ export const changeChart = (e,datosGrafica,setSelect)=>{
     $beneficios.style.height = pixBeneficio+'px';
     $gastos.style.height = pixGastos+'px';
     $ingresos.style.height = pixIngresos+'px';
-    if(beneficio < 0) $beneficios.style.backgroundColor = 'red'; 
-    if(beneficio > 0) $beneficios.style.backgroundColor = 'green';
+    if(beneficio < 0) $beneficios.style.backgroundColor = colorBeneficiosNegativos; 
+    if(beneficio > 0) $beneficios.style.backgroundImage = colorBeneficiosPositivos;
 }

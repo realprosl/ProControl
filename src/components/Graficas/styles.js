@@ -1,5 +1,12 @@
 import {CSS} from '../../assets/CSS.js';
-import {colorFondo} from '../../constantes.js';
+import {colorFondo,  
+        color1,
+        color2, 
+        color3,
+        color4,
+        colorIngresos,
+        colorGastos,
+        colorBeneficiosPositivos,} from '../../constantes.js';
 
 
 
@@ -24,6 +31,24 @@ export const styles = CSS({
         position:'absolute',
         bottom:'40px',
         right:'100px',
+        display:'flex',
+        justifyContent:'center',
+        alignItems: 'center',
+        border:'1px solid black',
+        width:'100px',
+        height:'25px',
+        cursor:'pointer',
+        backgroundColor: color3,
+        color:color2,
+        boxShadow: 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;',
+        hover:{
+            backgroundColor:color4,
+        }
+    },
+    class_icoAtras:{
+        width: '10px',
+        height: '10px',
+        fill:color2,
     },
     class_containerSelect:{
         display:'flex',
@@ -40,8 +65,7 @@ export const styles = CSS({
     class_grafico:{
         display:'flex',
         flexDirection:'row',
-        borderBottom: '1px solid black',
-        borderLeft: '1px solid black',
+        borderBottom: '1px solid white',
         paddingLeft: '20px',
         justifyContent: 'space-evenly',
         height: '40%',
@@ -68,20 +92,20 @@ export const styles = CSS({
         justifyContent: 'center',
         paddingTop: '20px',
         color: 'white',
+        width:'100px',
+        boxShadow:'6px -2px 18px -2px rgba(0,0,0,0.6)',
+        transition:'all 0.3s ',
     },
     class_ingresos:{
-        backgroundColor: 'blue',
-        width:'100px',
+        backgroundImage: colorIngresos,
         height:'100px',
     },
     class_gastos:{
-        backgroundColor: 'orange',
-        width:'100px',
+        backgroundImage: colorGastos,
         height:'100px',
     },
     class_beneficios:{
-        backgroundColor: 'green',
-        width:'100px',
+        backgroundImage: colorBeneficiosPositivos,
         height:'100px',
     },
     media_maxWidth_600px:{
@@ -89,12 +113,30 @@ export const styles = CSS({
         class_btnAtras: {
             bottom: '60px',
             right: '40px',
+            width: '50px',
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+            border:'1px solid '+ color2,
+            hover:{
+                backgroundColor:'transparent',
+            }
+        },
+        class_select:{
+            backgroundColor:'white',
+        },
+        class_icoAtras:{
+            width: '20px',
+            height: '20px',
         },
         class_grafico:{
-            marginLeft:'50px',
+            marginLeft:'40px',
+            borderLeft:'none',
+        },
+        class_chart:{
+            width:'50px'
         },
         class_labels:{
-            marginLeft:'50px',
+            marginLeft:'40px',
         }
     }
 })

@@ -2,7 +2,9 @@ import React ,{useState , useEffect} from 'react';
 import {getAjax} from '../../assets/getAjax';
 import {generateSelect} from '../../assets/generateSelect.js';
 import {changeChart} from '../../assets/changeChart.js';
+import {ReactComponent as Atras} from '../../svg/atras.svg';
 import { PORT_BD } from '../../constantes.js';
+import {color1,color2,color3,color4} from '../../constantes.js';
 import {styles} from './styles.js';
 
 
@@ -37,15 +39,15 @@ export const Graficas = (props)=>{
                 <div id="beneficios" className={`chart-${name}  beneficios-${name}`}>BENEFICIOS</div>
             </div>
             <div className={`labels-${name}`}>
-                <div className={`label-${name}`}>{(select==null)? 0 : datosGrafica[select].ingresos} €</div>
-                <div className={`label-${name}`}>{(select==null)? 0 : datosGrafica[select].gastos} €</div>
-                <div className={`label-${name}`}>{(select==null)? 0 : datosGrafica[select].beneficio} €</div>
+                <div className={`label-${name}`}>{(select==null)? 0 : parseInt(datosGrafica[select].ingresos)} €</div>
+                <div className={`label-${name}`}>{(select==null)? 0 : parseInt(datosGrafica[select].gastos)} €</div>
+                <div className={`label-${name}`}>{(select==null)? 0 : parseInt(datosGrafica[select].beneficio)} €</div>
             </div>
-           <button 
+           <div 
                 className={`btn-atras-${name}`}
                 onClick={() => setGraficasOn(!graficasOn)}>
-                Atras
-            </button>
+                <Atras className={`ico-atras-${name}`} ></Atras>
+            </div>
 
             <style>{styles}</style>
         </div>
